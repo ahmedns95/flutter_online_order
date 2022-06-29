@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../widgets/back_and_next_button.dart';
 import '../widgets/reusable_card_categories.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -94,56 +95,13 @@ class CategoriesScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Row(
-              children: <Widget>[
-                const Spacer(),
-                SizedBox(
-                  height: 60,
-                  width: 150,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      side: const BorderSide(
-                        color: Color(0xFFF5F5F5),
-                      ),
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.zero),
-                      ),
-                      primary: Colors.white,
-                    ),
-                    child: const Text(
-                      'Back',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: 'bottomFont',
-                        color: Color(0xFF838391),
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-                SizedBox(
-                  height: 60,
-                  width: 150,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/profile');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.zero),
-                      ),
-                      primary: const Color(0xFF20C3AF),
-                    ),
-                    child: const Text(
-                      'Next',
-                      style: TextStyle(fontSize: 18, fontFamily: 'bottomFont'),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-              ],
-            )
+            BackAndNextButton(
+                whiteButton: 'Back',
+                greenButton: 'Next',
+                pressBack: () {},
+                pressNext: () {
+                  Navigator.pushNamed(context, '/profile');
+                }),
           ],
         ),
       ),
