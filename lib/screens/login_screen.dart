@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_online_order/screens/side_left_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -17,7 +18,12 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const SizedBox(width: 20),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SideLeftDrawer()));
+                  },
                   child: SvgPicture.asset(
                     'assets/icons/Back.svg',
                     width: 9,

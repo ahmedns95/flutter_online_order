@@ -3,6 +3,7 @@ import 'package:flutter_online_order/screens/categories_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../widgets/back_and_next_button.dart';
+import '../widgets/information_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -11,98 +12,122 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: <Widget>[
-          const SizedBox(height: 60),
-          Row(
-            children: [
-              const SizedBox(width: 20),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: SvgPicture.asset(
-                  'assets/icons/Back.svg',
-                  width: 9,
-                  height: 16,
-                ),
-              ),
-              Spacer(),
-              GestureDetector(
-                onTap: () {},
-                child: SvgPicture.asset(
-                  'assets/icons/Menu.svg',
-                  width: 18,
-                  height: 8,
-                ),
-              ),
-              SizedBox(width: 20),
-            ],
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 60),
-            height: 200,
-            width: 190,
-            child: Column(
-              children: [
-                Image.asset('assets/images/Img_Profile.png'),
-                const SizedBox(height: 14),
-                Text(
-                  'Jeremías del Pozo',
-                  style: TextStyle(
-                    fontFamily: 'bottomFont',
-                    fontSize: 20,
-                    color: Color(0xFF525464),
+        children: [
+          Column(
+            children: <Widget>[
+              const SizedBox(height: 60),
+              Row(
+                children: [
+                  const SizedBox(width: 20),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: SvgPicture.asset(
+                      'assets/icons/Back.svg',
+                      width: 9,
+                      height: 16,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {},
+                    child: SvgPicture.asset(
+                      'assets/icons/Menu.svg',
+                      width: 18,
+                      height: 8,
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 60),
+                height: 200,
+                width: 190,
+                child: Column(
                   children: [
+                    Image.asset('assets/images/Img_Profile.png'),
+                    const SizedBox(height: 14),
                     const Text(
-                      'New York',
+                      'Jeremías del Pozo',
                       style: TextStyle(
                         fontFamily: 'bottomFont',
-                        fontSize: 13,
-                        color: Color(0xFF838391),
+                        fontSize: 20,
+                        color: Color(0xFF525464),
                       ),
                     ),
-                    const SizedBox(width: 15),
-                    SvgPicture.asset(
-                      'assets/icons/id.svg',
+                    const SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'New York',
+                          style: TextStyle(
+                            fontFamily: 'bottomFont',
+                            fontSize: 13,
+                            color: Color(0xFF838391),
+                          ),
+                        ),
+                        const SizedBox(width: 15),
+                        SvgPicture.asset(
+                          'assets/icons/id.svg',
+                        ),
+                        const SizedBox(width: 15),
+                        const Text(
+                          'ID: 1120611',
+                          style: TextStyle(
+                            fontFamily: 'bottomFont',
+                            fontSize: 13,
+                            color: Color(0xFF838391),
+                          ),
+                        )
+                      ],
                     ),
-                    const SizedBox(width: 15),
-                    const Text(
-                      'ID: 1120611',
-                      style: TextStyle(
-                        fontFamily: 'bottomFont',
-                        fontSize: 13,
-                        color: Color(0xFF838391),
-                      ),
-                    )
                   ],
                 ),
-              ],
-            ),
+              ),
+              BackAndNextButton(
+                whiteButton: 'About Me',
+                greenButton: 'Reviews',
+                pressBack: () {},
+                pressNext: () {},
+              ),
+            ],
           ),
-          BackAndNextButton(
-            whiteButton: 'About Me',
-            greenButton: 'Reviews',
-            pressBack: () {},
-            pressNext: () {},
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 20,
-            ),
+          const SizedBox(height: 40),
+          Expanded(
             child: Container(
-              color: Colors.red,
-              height: double.infinity,
-              width: double.infinity,
+              color: const Color(0xFF525464),
               child: Column(
-                children: <Widget>[],
+                children: [
+                  const SizedBox(height: 50),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[],
+                  ),
+                  const InformationWidget(
+                    icon: 'assets/icons/Phone_icon.svg',
+                    title: 'Phone number',
+                    text: '+966 532323232',
+                  ),
+                  const SizedBox(height: 15),
+                  const InformationWidget(
+                    icon: 'assets/icons/email.svg',
+                    title: 'Email',
+                    text: 'Ahmed@gmail.com',
+                  ),
+                  const SizedBox(height: 15),
+                  const InformationWidget(
+                    icon: 'assets/icons/Completed_icon.svg',
+                    title: 'Completed projects',
+                    text: '245',
+                  ),
+                ],
               ),
             ),
-          ),
+          )
         ],
       ),
     );
