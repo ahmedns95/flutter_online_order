@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/screens/categories_screen.dart';
+import 'package:flutter_online_order/screens/nofication_screen.dart';
+import 'package:flutter_online_order/widgets/nav_bar.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../widgets/back_and_next_button.dart';
@@ -16,33 +18,9 @@ class ProfileScreen extends StatelessWidget {
           Column(
             children: <Widget>[
               const SizedBox(height: 60),
-              Row(
-                children: [
-                  const SizedBox(width: 20),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: SvgPicture.asset(
-                      'assets/icons/Back.svg',
-                      width: 9,
-                      height: 16,
-                    ),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {},
-                    child: SvgPicture.asset(
-                      'assets/icons/Menu.svg',
-                      width: 18,
-                      height: 8,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                ],
-              ),
+              const NavBar(title: ''),
               Container(
-                margin: EdgeInsets.only(top: 60),
+                margin: const EdgeInsets.only(top: 50),
                 height: 200,
                 width: 190,
                 child: Column(
@@ -91,7 +69,9 @@ class ProfileScreen extends StatelessWidget {
                 whiteButton: 'About Me',
                 greenButton: 'Reviews',
                 pressBack: () {},
-                pressNext: () {},
+                pressNext: () {
+                  Navigator.pushNamed(context, '/notification');
+                },
               ),
             ],
           ),

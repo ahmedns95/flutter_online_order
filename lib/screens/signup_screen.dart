@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../widgets/nav_bar.dart';
+
 class SignupScreen extends StatelessWidget {
   const SignupScreen({Key? key}) : super(key: key);
 
@@ -13,39 +15,7 @@ class SignupScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
-            Row(
-              children: [
-                const SizedBox(width: 20),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: SvgPicture.asset(
-                    'assets/icons/Back.svg',
-                    width: 9,
-                    height: 16,
-                  ),
-                ),
-                const Spacer(),
-                const Text(
-                  'Sign Up',
-                  style: TextStyle(
-                      fontFamily: 'myFont',
-                      fontSize: 23,
-                      color: Color(0xFF525464)),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset(
-                    'assets/icons/Menu.svg',
-                    width: 18,
-                    height: 8,
-                  ),
-                ),
-                SizedBox(width: 20),
-              ],
-            ),
+            NavBar(title: 'Sign Up'),
             SizedBox(height: 50),
             Image.asset(
               'assets/images/sign_up.png',
@@ -106,9 +76,6 @@ class SignupScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/categories');
                 },
                 style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.zero),
-                  ),
                   primary: Color(0xFF20C3AF),
                 ),
                 child: const Text(

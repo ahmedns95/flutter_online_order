@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/screens/side_left_drawer.dart';
+import 'package:flutter_online_order/widgets/nav_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -14,43 +15,8 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
-            Row(
-              children: [
-                const SizedBox(width: 20),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SideLeftDrawer()));
-                  },
-                  child: SvgPicture.asset(
-                    'assets/icons/Back.svg',
-                    width: 9,
-                    height: 16,
-                  ),
-                ),
-                const Spacer(),
-                const Text(
-                  'Sign In',
-                  style: TextStyle(
-                      fontFamily: 'myFont',
-                      fontSize: 23,
-                      color: Color(0xFF525464)),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset(
-                    'assets/icons/Menu.svg',
-                    width: 18,
-                    height: 8,
-                  ),
-                ),
-                SizedBox(width: 20),
-              ],
-            ),
-            SizedBox(height: 50),
+            NavBar(title: 'Sign In'),
+            const SizedBox(height: 50),
             Image.asset(
               'assets/images/sign_in.png',
               height: 145,
