@@ -66,7 +66,7 @@ class PaymentForServices extends StatelessWidget {
             width: 335,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/orderInPro');
+                Navigator.pushNamed(context, '/customerInfo');
               },
               style: ElevatedButton.styleFrom(
                 shape: const RoundedRectangleBorder(
