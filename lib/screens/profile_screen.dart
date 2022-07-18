@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/screens/categories_screen.dart';
 import 'package:flutter_online_order/screens/nofication_screen.dart';
+import 'package:flutter_online_order/screens/side_left_drawer.dart';
 import 'package:flutter_online_order/widgets/nav_bar.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,6 +14,9 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /* drawer: const SideLeftDrawer(
+        bodyy: ProfileScreen(),
+      ),*/
       body: Column(
         children: [
           Column(
@@ -96,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                   const InformationWidget(
                     icon: 'assets/icons/email.svg',
                     title: 'Email',
-                    text: 'Ahmed@gmail.com',
+                    text: 'Ali@gmail.com',
                   ),
                   const SizedBox(height: 15),
                   const InformationWidget(

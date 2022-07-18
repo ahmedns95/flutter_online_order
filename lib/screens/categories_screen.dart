@@ -39,9 +39,7 @@ class CategoriesScreen extends StatelessWidget {
               image: 'assets/icons/Interiro_icon.png',
               title: 'Interior design',
             ),
-            const SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             BackAndNextButton(
                 whiteButton: 'Back',
                 greenButton: 'Next',

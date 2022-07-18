@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/screens/constance/assets_list.dart';
+import 'package:flutter_online_order/model/assets_list.dart';
 import 'package:flutter_online_order/widgets/page_view_list.dart';
 
 class ThirdScreen extends StatelessWidget {
@@ -8,17 +8,15 @@ class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+        /*  body: Center(
         child: Container(
           child: PageViewList(
-              desc: 'We insure each order for the amount\n of \$500',
-              title: 'Insured \norders',
-              image: 'assets/images/insured_orders.png',
+              index: 3,
               press: () {
                 Navigator.pushNamed(context, '/order');
               }),
         ),
-      ),
-    );
+      ),*/
+        );
   }
 }

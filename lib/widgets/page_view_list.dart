@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/screens/constance/assets_list.dart';
+import 'package:flutter_online_order/model/assets_list.dart';
 
 class PageViewList extends StatelessWidget {
   const PageViewList({
     Key? key,
-    required this.title,
-    required this.desc,
-    required this.image,
-    required this.press,
+    required this.index,
   }) : super(key: key);
-  final String title, desc, image;
-  final Function() press;
+  final int index;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(top: 60.0),
+      padding: EdgeInsets.only(top: 60.0, left: 20, right: 20),
       child: Column(
         children: [
           Text(
-            title,
+            slideList[index].title,
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 30,
@@ -30,13 +27,13 @@ class PageViewList extends StatelessWidget {
           ),
           const SizedBox(height: 70),
           Image.asset(
-            image,
+            slideList[index].image,
             width: 238,
             height: 285,
           ),
           const SizedBox(height: 70),
           Text(
-            desc,
+            slideList[index].desc,
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 20,
@@ -46,7 +43,7 @@ class PageViewList extends StatelessWidget {
             ),
           ),
           SizedBox(height: 50),
-          SizedBox(
+          /*  SizedBox(
             height: 60,
             width: 315,
             child: ElevatedButton(
@@ -62,7 +59,7 @@ class PageViewList extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontFamily: 'bottomFont'),
               ),
             ),
-          ),
+          ),*/
         ],
       ),
     );

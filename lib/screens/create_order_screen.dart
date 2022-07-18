@@ -10,7 +10,7 @@ class CreateOrder extends StatelessWidget {
       body: Center(
         child: Container(
           child: Padding(
-            padding: EdgeInsets.only(top: 60.0),
+            padding: const EdgeInsets.only(top: 60.0),
             child: Column(
               children: [
                 const Text(
@@ -37,15 +37,24 @@ class CreateOrder extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 80),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/login');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF20C3AF),
-                  ),
-                  child: Icon(
-                    Icons.add,
+                SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(const CircleBorder()),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0xFF20C3AF)), //Color(0xFF20C3AF),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.add,
+                        size: 30,
+                      ),
+                    ),
                   ),
                 ),
               ],

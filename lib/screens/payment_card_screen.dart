@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_online_order/widgets/nav_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../widgets/crad_info_details.dart';
+
 class PaymentCardScreen extends StatelessWidget {
   const PaymentCardScreen({Key? key}) : super(key: key);
 
@@ -18,155 +20,63 @@ class PaymentCardScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                CardInfoDetails(
-                  cardNum: 4321,
+              children: <Widget>[
+                const CardInfoDetails(
+                  cardNum: 4221,
                   price: 25388,
                   firstColor: 0xFF0284D8,
                   dates: '17/03',
                   secondColor: 0xFF02DA80,
                 ),
-                SizedBox(height: 15),
-                CardInfoDetails(
-                  cardNum: 4321,
+                const SizedBox(height: 15),
+                const CardInfoDetails(
+                  cardNum: 4341,
+                  price: 23488,
+                  firstColor: 0xFF0284D8,
+                  dates: '17/03',
+                  secondColor: 0xFF02DA80,
+                ),
+                const SizedBox(height: 15),
+                const CardInfoDetails(
+                  cardNum: 24231,
                   price: 25388,
                   firstColor: 0xFF0284D8,
                   dates: '17/03',
                   secondColor: 0xFF02DA80,
                 ),
-                SizedBox(height: 15),
-                CardInfoDetails(
+                const SizedBox(height: 15),
+                const CardInfoDetails(
                   cardNum: 4321,
                   price: 25388,
-                  firstColor: 0xFF0284D8,
+                  firstColor: 0xFFF6A11A,
                   dates: '17/03',
-                  secondColor: 0xFF02DA80,
+                  secondColor: 0xFFF23B14,
+                ),
+                const SizedBox(height: 150),
+                SizedBox(
+                  height: 60,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/addNewCard');
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.zero),
+                      ),
+                      primary: const Color(0xFF20C3AF),
+                    ),
+                    child: const Text(
+                      'Add new card',
+                      style: TextStyle(fontSize: 18, fontFamily: 'bottomFont'),
+                    ),
+                  ),
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
-    );
-  }
-}
-
-class CardInfoDetails extends StatelessWidget {
-  const CardInfoDetails({
-    Key? key,
-    required this.cardNum,
-    required this.price,
-    required this.dates,
-    required this.firstColor,
-    required this.secondColor,
-  }) : super(key: key);
-  final int cardNum, price, firstColor, secondColor;
-  final String dates;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Container(
-          height: 100,
-          width: 350,
-          decoration:
-              BoxDecoration(border: Border.all(color: const Color(0xFFE2E2E0))),
-          child: Row(
-            children: [
-              const SizedBox(width: 10),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 50,
-                    width: 85,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(6)),
-                      gradient: LinearGradient(
-                        begin: Alignment.topRight,
-                        end: Alignment.bottomLeft,
-                        colors: [
-                          Color(firstColor),
-                          Color(secondColor),
-                        ],
-                      ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 14),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              '   . . . ',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'bottomFont',
-                                  fontSize: 6),
-                            ),
-                            Text(
-                              cardNum.toString(),
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'bottomFont',
-                                  fontSize: 6),
-                            ),
-                            const Spacer(),
-                            Text(
-                              '$dates  ',
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'bottomFont',
-                                  fontSize: 6),
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        Text(
-                          '  \$ ${price.toString()}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'bottomFont',
-                              fontSize: 10),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
-                  Text(
-                    '   **** **** ****  4321',
-                    style: TextStyle(
-                      color: Color(0xFF525464),
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    '   17/2020',
-                    style: TextStyle(
-                      color: Color(0xFF838391),
-                    ),
-                  ),
-                ],
-              ),
-              SvgPicture.asset(
-                'assets/images/mastercard_logo.svg',
-                width: 9,
-                height: 16,
-              ),
-            ],
-          ),
-        ),
-      ],
     );
   }
 }

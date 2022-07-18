@@ -1,10 +1,14 @@
 class AssetsList {
   final String title, desc, image;
 
-  AssetsList({required this.title, required this.desc, required this.image});
+  AssetsList({
+    required this.title,
+    required this.desc,
+    required this.image,
+  });
 }
 
-List<AssetsList> demo_product = [
+List<AssetsList> slideList = [
   AssetsList(
       desc: 'We check each specialist before\n he starts work',
       title: 'Proven \nspecialists',

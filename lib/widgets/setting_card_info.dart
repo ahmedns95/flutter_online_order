@@ -27,7 +27,7 @@ class SettingCardInfo extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           InkWell(
             onTap: press,
             child: const Icon(

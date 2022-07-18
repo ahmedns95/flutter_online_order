@@ -15,8 +15,8 @@ class SignupScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
-            NavBar(title: 'Sign Up'),
-            SizedBox(height: 50),
+            const NavBar(title: 'Sign Up'),
+            const SizedBox(height: 50),
             Image.asset(
               'assets/images/sign_up.png',
               height: 145,

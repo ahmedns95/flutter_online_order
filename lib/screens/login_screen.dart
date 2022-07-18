@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
-            NavBar(title: 'Sign In'),
+            const NavBar(title: 'Sign In'),
             const SizedBox(height: 50),
             Image.asset(
               'assets/images/sign_in.png',
@@ -103,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                     width: 100,
                     decoration: BoxDecoration(
                         border: Border.all(
-                      color: Color(0xFFE2E2E0),
+                      color: const Color(0xFFE2E2E0),
                     )),
                     child: Image.asset(
                       'assets/images/facebook.png',
@@ -142,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 90),
+            const SizedBox(height: 90),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
