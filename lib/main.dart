@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         '/customerInfo': (context) => const CustomerInfo(),
         '/setting': (context) => const SettingScreen(),
         '/paymentsCard': (context) => const PaymentCardScreen(),
-        '/addNewCard': (context) => const AddNewCardScreen(),
+        '/addNewCard': (context) => const AddNewCardScreen(), //
       },
     );
   }
