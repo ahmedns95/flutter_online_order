@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../widgets/nav_bar.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({Key? key}) : super(key: key);

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/screens/side_left_drawer.dart';
-import 'package:flutter_online_order/widgets/back_and_next_button.dart';
-
-import '../widgets/nav_bar.dart';
-import '../widgets/search_with_icon.dart';
+import 'package:flutter_online_order/screens/widgets/back_and_next_button.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/search_with_icon.dart';
 
 class ConstructionWorks extends StatefulWidget {
   const ConstructionWorks({Key? key}) : super(key: key);

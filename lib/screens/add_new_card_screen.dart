@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 
 class AddNewCardScreen extends StatefulWidget {
   const AddNewCardScreen({Key? key}) : super(key: key);

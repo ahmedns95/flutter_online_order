@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/card_payment_services.dart';
-import '../widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/card_payment_services.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 
 class PaymentForServices extends StatelessWidget {
   const PaymentForServices({Key? key}) : super(key: key);

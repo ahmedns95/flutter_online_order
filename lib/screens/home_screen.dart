@@ -3,9 +3,8 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/model/assets_list.dart';
-import 'package:flutter_online_order/widgets/page_view_list.dart';
-
-import '../widgets/slide_dots.dart';
+import 'package:flutter_online_order/screens/widgets/page_view_list.dart';
+import 'package:flutter_online_order/screens/widgets/slide_dots.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

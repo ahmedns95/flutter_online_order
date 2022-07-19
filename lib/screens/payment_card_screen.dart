@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/crad_info_details.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../widgets/crad_info_details.dart';
 
 class PaymentCardScreen extends StatelessWidget {
   const PaymentCardScreen({Key? key}) : super(key: key);

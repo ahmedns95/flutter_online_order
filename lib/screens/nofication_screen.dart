@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/screens/side_left_drawer.dart';
+import 'package:flutter_online_order/screens/widgets/card_nofication_info.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../widgets/card_nofication_info.dart';
-import '../widgets/nav_bar.dart';
 
 class NoficationScreen extends StatelessWidget {
   const NoficationScreen({Key? key}) : super(key: key);

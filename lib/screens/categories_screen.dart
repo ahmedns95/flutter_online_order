@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/back_and_next_button.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/reusable_card_categories.dart';
+import 'package:flutter_online_order/screens/widgets/search_with_icon.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../widgets/back_and_next_button.dart';
-import '../widgets/reusable_card_categories.dart';
-import '../widgets/search_with_icon.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key? key}) : super(key: key);

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_online_order/screens/side_left_drawer.dart';
-
-import '../widgets/back_and_next_button.dart';
-import '../widgets/card_order_prg.dart';
-import '../widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/back_and_next_button.dart';
+import 'package:flutter_online_order/screens/widgets/card_order_prg.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 
 class OrdersInProgress extends StatelessWidget {
   const OrdersInProgress({Key? key}) : super(key: key);

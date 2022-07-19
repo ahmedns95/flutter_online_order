@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/widgets/nav_bar.dart';
-
-import '../widgets/setting_card_info.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/setting_card_info.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);

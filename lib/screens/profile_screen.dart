@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_online_order/screens/categories_screen.dart';
-import 'package:flutter_online_order/screens/nofication_screen.dart';
-import 'package:flutter_online_order/screens/side_left_drawer.dart';
-import 'package:flutter_online_order/widgets/nav_bar.dart';
+import 'package:flutter_online_order/screens/widgets/back_and_next_button.dart';
+import 'package:flutter_online_order/screens/widgets/information_widget.dart';
+import 'package:flutter_online_order/screens/widgets/nav_bar.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../widgets/back_and_next_button.dart';
-import '../widgets/information_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
