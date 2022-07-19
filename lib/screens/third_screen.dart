@@ -6,16 +6,6 @@ class ThirdScreen extends StatelessWidget {
   const ThirdScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        /*  body: Center(
-        child: Container(
-          child: PageViewList(
-              index: 3,
-              press: () {
-                Navigator.pushNamed(context, '/order');
-              }),
-        ),
-      ),*/
-        );
+    return Scaffold();
   }
 }
