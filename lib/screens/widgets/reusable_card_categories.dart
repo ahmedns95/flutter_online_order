@@ -6,9 +6,11 @@ class ReusableCardCategories extends StatelessWidget {
     Key? key,
     required this.image,
     required this.title,
+    required this.press,
   }) : super(key: key);
 
   final String image, title;
+  final VoidCallback? press;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -46,8 +48,8 @@ class ReusableCardCategories extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  GestureDetector(
-                    onTap: () {},
+                  InkWell(
+                    onTap: press,
                     child: SvgPicture.asset('assets/icons/Path.svg'),
                   ),
                 ],

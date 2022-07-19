@@ -19,25 +19,33 @@ class CategoriesScreen extends StatelessWidget {
             const NavBar(title: 'Categories'),
             const SizedBox(height: 30),
             const SearchWithIcon(hintText: 'Search by category'),
-            const ReusableCardCategories(
-              image: 'assets/icons/Furniture_icon.png',
-              title: 'Furniture works',
-            ),
-            const ReusableCardCategories(
+            ReusableCardCategories(
+                image: 'assets/icons/Furniture_icon.png',
+                title: 'Furniture works',
+                press: () {
+                  Navigator.pushNamed(context, '/furniture');
+                }),
+            ReusableCardCategories(
               image: 'assets/icons/Cleaning_icon.png',
               title: 'Cleaning services',
+              press: () {
+                Navigator.pushNamed(context, '/furniture');
+              },
             ),
-            const ReusableCardCategories(
+            ReusableCardCategories(
               image: 'assets/icons/Equipment_icon.png',
               title: 'Equipment repair',
+              press: () {},
             ),
-            const ReusableCardCategories(
+            ReusableCardCategories(
               image: 'assets/icons/courier_icon.png',
               title: 'Courier services',
+              press: () {},
             ),
-            const ReusableCardCategories(
+            ReusableCardCategories(
               image: 'assets/icons/Interiro_icon.png',
               title: 'Interior design',
+              press: () {},
             ),
             const SizedBox(height: 30),
             BackAndNextButton(

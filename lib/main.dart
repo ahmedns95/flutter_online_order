@@ -3,6 +3,7 @@ import 'package:flutter_online_order/screens/add_new_card_screen.dart';
 import 'package:flutter_online_order/screens/categories_screen.dart';
 import 'package:flutter_online_order/screens/construction_works_screen.dart';
 import 'package:flutter_online_order/screens/customer_info_screen.dart';
+import 'package:flutter_online_order/screens/furniture_works.dart';
 import 'package:flutter_online_order/screens/nofication_screen.dart';
 import 'package:flutter_online_order/screens/orders_in_progress_screen.dart';
 import 'package:flutter_online_order/screens/payment_card_screen.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignupScreen(),
         '/categories': (context) => const CategoriesScreen(),
+        '/furniture': (context) => const FurnitureWorks(),
         '/profile': (context) => const ProfileScreen(),
         '/notification': (context) => const NoficationScreen(),
         '/orderInPro': (context) => const OrdersInProgress(),
