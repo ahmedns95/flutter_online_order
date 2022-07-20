@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_online_order/model/user_model.dart';
 import 'package:flutter_online_order/view/screens/categories_screen.dart';
 import 'package:get/get.dart';
 
@@ -31,6 +32,21 @@ class AuthViewModel extends GetxController {
   void signInWithEmailAndPassword() async {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
+      Get.offAll(CategoriesScreen());
+    } catch (e) {
+      Get.snackbar('Error login account', 'e.message',
+          snackPosition: SnackPosition.BOTTOM);
+    }
+  }
+
+  void signUpWithEmailAndPassword() async {
+    try {
+      await _auth
+          .createUserWithEmailAndPassword(email: email, password: password)
+          .then((user) {
+        UserModel user = UserModel(userId: user.userId, name, email, phoneNum);
+      });
+
       Get.offAll(CategoriesScreen());
     } catch (e) {
       Get.snackbar('Error login account', 'e.message',

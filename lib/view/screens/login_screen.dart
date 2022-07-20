@@ -6,7 +6,6 @@ import 'package:flutter_online_order/view/screens/widgets/custom_text_form_field
 import 'package:flutter_online_order/view/screens/widgets/nav_bar.dart';
 import 'package:flutter_online_order/view/screens/widgets/social_media_container.dart';
 
-
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
@@ -129,7 +128,7 @@ class LoginScreen extends GetWidget<AuthViewModel> {
                   InkWell(
                     onTap: () {
                       {
-                        Get.to(const SignupScreen());
+                        Get.to(() => SignupScreen());
                       }
                     },
                     child: const Text(
