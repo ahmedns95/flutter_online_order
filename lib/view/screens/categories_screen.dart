@@ -4,8 +4,6 @@ import 'package:flutter_online_order/view/screens/widgets/nav_bar.dart';
 import 'package:flutter_online_order/view/screens/widgets/reusable_card_categories.dart';
 import 'package:flutter_online_order/view/screens/widgets/search_with_icon.dart';
 
-import 'package:flutter_svg/flutter_svg.dart';
-
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key? key}) : super(key: key);
 

@@ -3,9 +3,11 @@ import 'package:flutter_online_order/model/user_model.dart';
 import 'package:flutter_online_order/view/screens/categories_screen.dart';
 import 'package:get/get.dart';
 
+import '../controler/firestore_services.dart';
+
 class AuthViewModel extends GetxController {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  late final String email, password, name;
+  late String email, password, name;
   Rxn<User> _user = Rxn<User>();
   String? get user => _user.value?.email;
 
@@ -32,7 +34,7 @@ class AuthViewModel extends GetxController {
   void signInWithEmailAndPassword() async {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
-      Get.offAll(CategoriesScreen());
+      Get.offAll(const CategoriesScreen());
     } catch (e) {
       Get.snackbar('Error login account', 'e.message',
           snackPosition: SnackPosition.BOTTOM);
@@ -44,13 +46,20 @@ class AuthViewModel extends GetxController {
       await _auth
           .createUserWithEmailAndPassword(email: email, password: password)
           .then((user) {
-        UserModel user = UserModel(userId: user.userId, name, email, phoneNum);
+        saveUser(user);
       });
-
-      Get.offAll(CategoriesScreen());
+      Get.offAll(const CategoriesScreen());
     } catch (e) {
       Get.snackbar('Error login account', 'e.message',
           snackPosition: SnackPosition.BOTTOM);
     }
+  }
+
+  void saveUser(UserCredential user) async {
+    await FireStoreUser().addUserToFireStore(UserModel(
+      userId: user.user?.uid,
+      email: user.user?.email,
+      name: name,
+    ));
   }
 }

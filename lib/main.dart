@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         '/construction': (context) => const ConstructionWorks(),
         '/payment': (context) => const PaymentForServices(),
         '/customerInfo': (context) => const CustomerInfo(),
-        '/setting': (context) => const SettingScreen(),
+        '/setting': (context) => SettingScreen(),
         '/paymentsCard': (context) => const PaymentCardScreen(),
         '/addNewCard': (context) => const AddNewCardScreen(), //
       },

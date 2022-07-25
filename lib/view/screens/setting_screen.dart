@@ -1,12 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_online_order/view/screens/login_screen.dart';
 import 'package:flutter_online_order/view/screens/widgets/nav_bar.dart';
 import 'package:flutter_online_order/view/screens/widgets/setting_card_info.dart';
-
-
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class SettingScreen extends StatelessWidget {
-  const SettingScreen({Key? key}) : super(key: key);
-
+  FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +35,8 @@ class SettingScreen extends StatelessWidget {
                 const SizedBox(height: 60),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, '/setting');
+                    _auth.signOut();
+                    Get.offAll(LoginScreen());
                   },
                   child: const Text(
                     'Log out',

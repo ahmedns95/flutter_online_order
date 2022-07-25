@@ -4,7 +4,6 @@ import 'package:flutter_online_order/model/auth_view_model.dart';
 import 'package:flutter_online_order/view/screens/login_screen.dart';
 import 'package:flutter_online_order/view/screens/widgets/custom_text_form_field.dart';
 import 'package:flutter_online_order/view/screens/widgets/nav_bar.dart';
-import 'package:flutter_online_order/view/screens/widgets/social_media_container.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
